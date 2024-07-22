@@ -14,7 +14,12 @@ function App() {
         startIcon={<CloudUploadIcon />}
       >
         Upload file
-        <input type="file" hidden onChange={e => console.log(e.target.files?.item(0))}/>
+        <input
+          type="file"
+          hidden
+          accept='.mp3, .png, .jpeg'
+          onChange={e => console.log(e.target.files?.item(0))}
+        />
       </Button>
     </>
   )
